@@ -262,3 +262,31 @@ header .nav ul li a {
   cursor: pointer;
   color: blue;
 }
+
+.nav-bottom {
+  background-color: #8fd6e4;
+  padding: 30px 0;
+}
+
+.nav-bottom__inner {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.nav-bottom__inner ul {
+  display: flex;
+}
+
+.nav-bottom__inner ul li {
+  margin-right: 30px;
+}
+
+.nav-bottom__inner ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  background-color: #375961;
+  padding: 35px 0;
+}
