@@ -1,0 +1,135 @@
+header {
+  background-image: url(images/elephant.jpg);
+  background-size: cover;
+  height: 800px;
+  position: relative;
+  border-bottom-left-radius: 2000px 200px;
+  border-bottom-right-radius: 2000px 200px;
+}
+
+header .icon {
+  position: absolute;
+  top: 28px;
+  left: 97px;
+}
+
+header .icon i {
+  color: white;
+  margin-right: 10px;
+}
+
+header .icon a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+header .icon a p.title {
+  font-size: 26px;
+}
+
+header .icon a p.sub-title {
+  font-size: 13px;
+  text-align: center;
+}
+
+header .nav {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+
+header .nav ul {
+  display: flex;
+}
+
+header .nav ul li {
+  margin-right: 30px;
+}
+
+header .nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.concept {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.concept__inner {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.concept__inner h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.concept__inner__text {
+  line-height: 1.5rem;
+  font-size: 18px;
+  margin-bottom: 27px;
+}
+
+.concept__inner__title {
+  position: relative;
+}
+
+.concept__inner__title__inner {
+  text-align: center;
+  line-height: 1.4rem;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.concept__inner__title__inner__mainTitle {
+  font-size: 30px;
+}
+
+.concept__inner__title__inner__subTitle {
+  font-size: 15px;
+}
+
+.concept__inner__title p.angle-left {
+  position: absolute;
+  left: 45px;
+  font-size: 30px;
+}
+
+.concept__inner__title p.angle-right {
+  position: absolute;
+  top: 24px;
+  right: 42px;
+  font-size: 30px;
+}
+
+.products {
+  padding-top: 50px;
+}
+
+.products__title {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.products__title h1 {
+  font-size: 30px;
+}
+
+.products__title a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 29px;
+}
+
+.products__title a span {
+  margin-left: 10px;
+}
