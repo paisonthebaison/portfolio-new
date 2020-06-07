@@ -197,3 +197,18 @@ header{
     }
   }
 }
+
+.sns{
+  margin:20px;
+  &__wrapper{
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    justify-content: space-around;
+    i:hover{
+      opacity: 0.8;
+      cursor: pointer;
+      color:blue;
+    }
+  }
+}

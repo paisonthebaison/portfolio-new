@@ -245,3 +245,20 @@ header .nav ul li a {
   opacity: 0.7;
   line-height: 1.5rem;
 }
+
+.sns {
+  margin: 20px;
+}
+
+.sns__wrapper {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.sns__wrapper i:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  color: blue;
+}
