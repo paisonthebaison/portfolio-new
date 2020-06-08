@@ -8,9 +8,13 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style1.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/section-move.js"></script>
+  <script src="js/page-top.js"></script>
+
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="icon">
       <a href="#">
         <i class="fas fa-dove fa-3x"></i>
@@ -22,16 +26,16 @@
     </div>
     <div class="nav">
       <ul>
-        <li><a href="">TOP</a></li>
-        <li><a href="">PRODUCT</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">NEWS</a></li>
-        <li><a href="">CONTACT</a></li>
+        <li><a class="goSection" href="#">TOP</a></li>
+        <li><a class="goSection" href="#works">WORKS</a></li>
+        <li><a class="goSection" href="#about">ABOUT</a></li>
+        <li><a class="goSection" href="#news">NEWS</a></li>
+        <li><a class="goSection" href="#">CONTACT</a></li>
         
       </ul>
     </div>
   </header>
-  <section class="concept">
+  <section id="about" class="concept">
     <div class="concept__inner">
       <h1>さあ、旅に出よう。</h1>
       <div class="concept__inner__text">
@@ -64,9 +68,9 @@
       
     </div>
   </section>
-  <section class="products">
+  <section id="works" class="products">
     <div class="products__title">
-      <h1>PRODUCT</h1>
+      <h1>Works</h1>
       <a href="#">More<span>&#187;</span></a>
     </div>
     <div class="products__main">
@@ -98,7 +102,7 @@
       </a>
     </div>
   </section>
-  <section class="news">
+  <section id="news" class="news">
     <div class="news__title">
       <h1>News</h1>
       <a href="#">More<span>&#187;</span></a>
@@ -174,15 +178,17 @@
   <section class="nav-bottom">
     <div class="nav-bottom__inner">
       <ul>
-        <li><a href="">TOP</a></li>
-        <li><a href="">PRODUCT</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">NEWS</a></li>
-        <li><a href="">CONTACT</a></li>
-        
+        <li><a class="goSection" href="#">TOP</a></li>
+        <li><a class="goSection" href="#works">WORKS</a></li>
+        <li><a class="goSection" href="#about">ABOUT</a></li>
+        <li><a class="goSection" href="#news">NEWS</a></li>
+        <li><a class="goSection" href="#">CONTACT</a></li>
       </ul>
     </div>
   </section>
+  
+  <div id="page_top"><a href="#">TOP</a></div>
+
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__inner__icon">
@@ -196,6 +202,16 @@
       </div>
     </div>
   </footer>
-  
+
+  <script src="js/jquery.bgswitcher.js"></script>
+  <script>
+    jQuery(function($) {
+      $('.header').bgSwitcher({
+      images: ['images/monks.jpg','images/elephant.jpg', 'images/jetty.jpg'],
+      effect: "fade",
+      easing: "linear"
+      });
+    });
+    </script>
 </body>
 </html>
