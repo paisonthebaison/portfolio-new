@@ -1,18 +1,39 @@
 @mixin nav {
   ul{
     display:flex;
-     li{
-       margin-right:30px;
-       &:hover{
-         opacity: 0.7;
-         cursor: pointer;
-       }
-       a{
+    li{
+      margin-right:30px;
+      a{
+        display: inline-block;
+        position: relative;
+        color: white;
          text-decoration: none;
-         color:white;
-       }
-     }
+      }
+      a:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 3px;
+        background:white;
+        transform: scale(0, 1);
+        transition: 0.4s;
+      }
+      a:hover:before {
+        transform: scale(1);
+      }
+    }
   }
+}
+
+@mixin english-font{
+  font-family: 'Lexend Tera', sans-serif;
+}
+
+@mixin jap-font{
+  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .header{
   background-size: cover;
@@ -28,13 +49,18 @@
   
   .icon{
     position:absolute;
-    top: 28px;
-    left: 97px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+    
     
     a{
       display:flex;
       text-decoration:none;
       color:white;
+      @include english-font;
       &:hover{
         opacity: 0.8;
         cursor: pointer;
@@ -44,7 +70,8 @@
         margin-right:10px;
       }
       p.title{
-       font-size: 26px;
+       font-size: 50px;
+       font-family: 'Lexend Tera', sans-serif;
       }
       p.sub-title{
         font-size: 13px;
@@ -57,61 +84,14 @@
     top:50px;
     right:10px;
     @include nav;
-  }
-}
-
-.concept{
-  background-color: #f6f6f6;
-  padding-top:30px;
-  padding-bottom:30px;
-  
-  &__inner{
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 100px;
-    h1{
-      font-size: 30px;
-      font-weight: bold;
-      margin-bottom: 50px;
-    }
-    &__text{
-      line-height: 1.5rem;
-      font-size: 18px;
-      margin-bottom: 27px;
-    }
-    &__title{
-      position:relative;
-      &__inner{
-        text-align:center;
-        line-height: 1.4rem;
-        margin-bottom: 40px;
-        margin-top: 40px;
-        &__mainTitle{
-          font-size:30px;
-        }
-        &__subTitle{
-          font-size:15px;
-        }
-      }
-      p.angle-left{
-        position:absolute;
-        left:45px;
-        font-size: 30px;
-      }
-      p.angle-right{
-        position:absolute;
-        top: 24px;
-        right: 42px;
-        font-size: 30px;
-      }
-    }
+    @include english-font;
   }
 }
 
 @mixin title {
   display:flex;
   justify-content: space-between;
-  width:700px;
+  width:780px;
   margin:0 auto;
   h1{
     font-size:30px;
@@ -130,14 +110,102 @@
     }
   }
 }
+
+
+.concept{
+  background-color: #f6f6f6;
+  padding-top:50px;
+  padding-bottom:30px;
+  &__title{
+    @include title;
+    @include english-font;
+  }
+  
+  &__inner{
+    width: 780px;
+    margin: 0 auto;
+    margin-top: 40px;
+    @include jap-font;
+    &__details{
+      display:flex;
+      margin-top:30px;
+      &__img{
+        width: 300px;
+        margin: 0 auto;
+        margin-left: 0;
+        img{
+          max-width:100%;
+        }
+      }
+      &__text{
+      margin-left:30px;
+        &__name{
+          margin-bottom:10px;
+          p{
+            font-weight:bold;
+            font-size:20px;
+            line-height: 1.3rem;
+            span.en-name{
+              font-size: 14px;
+            }
+          }
+        }
+        &__contact{
+          ul:nth-of-type(3){
+            margin-top:17px;
+            margin-bottom: 2px;
+          }
+          ul:nth-of-type(4){
+            margin-bottom: 2px;
+          }
+          ul.inline{
+              list-style: none;
+              padding-left:0;
+           
+            li{
+              display:inline;
+              a{
+              text-decoration:none;
+              color:black;
+              }
+              a:hover{
+                text-decoration:underline;
+              }
+              a.sns{
+                margin-left:0px;
+              }
+            }
+            li:nth-child(2):before{
+              content: "|";
+              color:silver;
+              margin-right: 13px;
+            }
+            li:nth-child(2){
+              font-size:14px;
+            }
+          }
+          i:hover{
+            opacity: 0.8;
+            cursor: pointer;
+            color:blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 .products{
   padding-top:50px;
+  padding-bottom:50px;
   &__title{
    @include title;
+   @include english-font;
   }
   &__main{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width:800px;
     margin:0 auto;
     margin-top: 60px;
@@ -150,64 +218,31 @@
       }
     }
       &__detail{
-      width:23%;
+      width:45%;
         img{
           max-width: 100%;
-          border-top-right-radius: 20%;
-          border-bottom-right-radius: 20%;
+          // border-top-right-radius: 20%;
+          // border-bottom-right-radius: 20%;
           box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
           margin-bottom: 30px;
         }
-        p{
-          font-size: 20px;
+        h3{
+          font-weight:bold;
+          font-size:22px;
+        }
+        p.skill{
+          font-size: 14px;
+          margin-top: 10px;
+        }
+        &__explanation{
+          font-size:14px;
+          word-wrap: break-word;
+          margin-top: 4px;
         }
       }
   }
 }
 
-.news{
-  margin-top: 150px;
-  padding-top: 70px;
-  background-color: #f6f6f6;
-  &__title{
-    @include title;
-  }
-  &__details{
-    width:800px;
-    margin:0 auto;
-    margin-top: 50px;
-    a{
-      text-decoration: none;
-      color:black;
-    }
-    &__link{
-      display:flex;
-      img{
-        width:30%;
-        width: 45%;
-        height: 200px;
-        margin-right: 37px;
-      }
-      &__explanation{
-        h2{
-          font-weight:bold;
-          font-size:20px;
-          margin-bottom: 10px;
-        }
-        &__date{
-          font-size:10px;
-          opacity:0.7;
-          margin-bottom: 20px;
-        }
-        &__text{
-          font-size: 13px;
-          opacity: 0.7;
-          line-height: 1.5rem;
-        }
-      }
-    }
-  }
-}
 
 .sns{
   margin:20px;
@@ -231,7 +266,8 @@
     width:400px;
     margin:0 auto;
     @include nav;
-   }
+    @include english-font;
+  }
 }
 
 #page_top {
@@ -246,6 +282,7 @@
   text-align: center;
   text-decoration: none;
   padding: 20px 20px;
+  @include english-font;
 }
 #page_top a:hover {
   background-color: #666;
@@ -266,6 +303,7 @@
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    @include english-font;
     &__icon{
       a{
         text-decoration: none;
@@ -285,3 +323,5 @@
     }
   }
 }
+
+

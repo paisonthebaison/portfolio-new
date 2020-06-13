@@ -8,14 +8,18 @@
 
 .header .icon {
   position: absolute;
-  top: 28px;
-  left: 97px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  margin: auto;
 }
 
 .header .icon a {
   display: flex;
   text-decoration: none;
   color: white;
+  font-family: 'Lexend Tera', sans-serif;
 }
 
 .header .icon a:hover {
@@ -29,7 +33,8 @@
 }
 
 .header .icon a p.title {
-  font-size: 26px;
+  font-size: 50px;
+  font-family: 'Lexend Tera', sans-serif;
 }
 
 .header .icon a p.sub-title {
@@ -41,6 +46,7 @@
   position: absolute;
   top: 50px;
   right: 10px;
+  font-family: 'Lexend Tera', sans-serif;
 }
 
 .header .nav ul {
@@ -51,81 +57,162 @@
   margin-right: 30px;
 }
 
-.header .nav ul li:hover {
-  opacity: 0.7;
-  cursor: pointer;
+.header .nav ul li a {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
 }
 
-.header .nav ul li a {
-  text-decoration: none;
-  color: white;
+.header .nav ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+
+.header .nav ul li a:hover:before {
+  transform: scale(1);
 }
 
 .concept {
   background-color: #f6f6f6;
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 30px;
 }
 
+.concept__title {
+  display: flex;
+  justify-content: space-between;
+  width: 780px;
+  margin: 0 auto;
+  font-family: 'Lexend Tera', sans-serif;
+}
+
+.concept__title h1 {
+  font-size: 30px;
+}
+
+.concept__title a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 29px;
+}
+
+.concept__title a span {
+  margin-left: 10px;
+}
+
+.concept__title a:hover {
+  background-color: green;
+  color: white;
+}
+
 .concept__inner {
+  width: 780px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.concept__inner__details {
+  display: flex;
+  margin-top: 30px;
+}
+
+.concept__inner__details__img {
   width: 300px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-left: 0;
 }
 
-.concept__inner h1 {
-  font-size: 30px;
+.concept__inner__details__img img {
+  max-width: 100%;
+}
+
+.concept__inner__details__text {
+  margin-left: 30px;
+}
+
+.concept__inner__details__text__name {
+  margin-bottom: 10px;
+}
+
+.concept__inner__details__text__name p {
   font-weight: bold;
-  margin-bottom: 50px;
+  font-size: 20px;
+  line-height: 1.3rem;
 }
 
-.concept__inner__text {
-  line-height: 1.5rem;
-  font-size: 18px;
-  margin-bottom: 27px;
+.concept__inner__details__text__name p span.en-name {
+  font-size: 14px;
 }
 
-.concept__inner__title {
-  position: relative;
+.concept__inner__details__text__contact ul:nth-of-type(3) {
+  margin-top: 17px;
+  margin-bottom: 2px;
 }
 
-.concept__inner__title__inner {
-  text-align: center;
-  line-height: 1.4rem;
-  margin-bottom: 40px;
-  margin-top: 40px;
+.concept__inner__details__text__contact ul:nth-of-type(4) {
+  margin-bottom: 2px;
 }
 
-.concept__inner__title__inner__mainTitle {
-  font-size: 30px;
+.concept__inner__details__text__contact ul.inline {
+  list-style: none;
+  padding-left: 0;
 }
 
-.concept__inner__title__inner__subTitle {
-  font-size: 15px;
+.concept__inner__details__text__contact ul.inline li {
+  display: inline;
 }
 
-.concept__inner__title p.angle-left {
-  position: absolute;
-  left: 45px;
-  font-size: 30px;
+.concept__inner__details__text__contact ul.inline li a {
+  text-decoration: none;
+  color: black;
 }
 
-.concept__inner__title p.angle-right {
-  position: absolute;
-  top: 24px;
-  right: 42px;
-  font-size: 30px;
+.concept__inner__details__text__contact ul.inline li a:hover {
+  text-decoration: underline;
+}
+
+.concept__inner__details__text__contact ul.inline li a.sns {
+  margin-left: 0px;
+}
+
+.concept__inner__details__text__contact ul.inline li:nth-child(2):before {
+  content: "|";
+  color: silver;
+  margin-right: 13px;
+}
+
+.concept__inner__details__text__contact ul.inline li:nth-child(2) {
+  font-size: 14px;
+}
+
+.concept__inner__details__text__contact i:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  color: blue;
 }
 
 .products {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .products__title {
   display: flex;
   justify-content: space-between;
-  width: 700px;
+  width: 780px;
   margin: 0 auto;
+  font-family: 'Lexend Tera', sans-serif;
 }
 
 .products__title h1 {
@@ -150,7 +237,7 @@
 
 .products__main {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 800px;
   margin: 0 auto;
   margin-top: 60px;
@@ -167,92 +254,29 @@
 }
 
 .products__main__detail {
-  width: 23%;
+  width: 45%;
 }
 
 .products__main__detail img {
   max-width: 100%;
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
 
-.products__main__detail p {
-  font-size: 20px;
-}
-
-.news {
-  margin-top: 150px;
-  padding-top: 70px;
-  background-color: #f6f6f6;
-}
-
-.news__title {
-  display: flex;
-  justify-content: space-between;
-  width: 700px;
-  margin: 0 auto;
-}
-
-.news__title h1 {
-  font-size: 30px;
-}
-
-.news__title a {
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  padding: 10px 29px;
-}
-
-.news__title a span {
-  margin-left: 10px;
-}
-
-.news__title a:hover {
-  background-color: green;
-  color: white;
-}
-
-.news__details {
-  width: 800px;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
-.news__details a {
-  text-decoration: none;
-  color: black;
-}
-
-.news__details__link {
-  display: flex;
-}
-
-.news__details__link img {
-  width: 30%;
-  width: 45%;
-  height: 200px;
-  margin-right: 37px;
-}
-
-.news__details__link__explanation h2 {
+.products__main__detail h3 {
   font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 22px;
 }
 
-.news__details__link__explanation__date {
-  font-size: 10px;
-  opacity: 0.7;
-  margin-bottom: 20px;
+.products__main__detail p.skill {
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.news__details__link__explanation__text {
-  font-size: 13px;
-  opacity: 0.7;
-  line-height: 1.5rem;
+.products__main__detail__explanation {
+  font-size: 14px;
+  word-wrap: break-word;
+  margin-top: 4px;
 }
 
 .sns {
@@ -280,6 +304,7 @@
 .nav-bottom__inner {
   width: 400px;
   margin: 0 auto;
+  font-family: 'Lexend Tera', sans-serif;
 }
 
 .nav-bottom__inner ul {
@@ -290,14 +315,27 @@
   margin-right: 30px;
 }
 
-.nav-bottom__inner ul li:hover {
-  opacity: 0.7;
-  cursor: pointer;
+.nav-bottom__inner ul li a {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
 }
 
-.nav-bottom__inner ul li a {
-  text-decoration: none;
-  color: white;
+.nav-bottom__inner ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+
+.nav-bottom__inner ul li a:hover:before {
+  transform: scale(1);
 }
 
 #page_top {
@@ -313,6 +351,7 @@
   text-align: center;
   text-decoration: none;
   padding: 20px 20px;
+  font-family: 'Lexend Tera', sans-serif;
 }
 
 #page_top a:hover {
@@ -336,6 +375,7 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Lexend Tera', sans-serif;
 }
 
 .footer__inner__icon a {

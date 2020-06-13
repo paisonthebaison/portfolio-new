@@ -5,7 +5,7 @@ $(".goSection").on("click", function() {
 
   const offsetTop = $(scrollTarget).offset().top;
 
-  $("html, body").animate({ scrollTop: offsetTop }, 200);
+  $("html, body").animate({ scrollTop: offsetTop }, 2000);
 
   return false;
 });
