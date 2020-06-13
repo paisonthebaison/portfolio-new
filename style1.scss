@@ -221,10 +221,10 @@
       width:45%;
         img{
           max-width: 100%;
-          // border-top-right-radius: 20%;
-          // border-bottom-right-radius: 20%;
           box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
           margin-bottom: 30px;
+          height: 300px;
+          width: 100%;
         }
         h3{
           font-weight:bold;
@@ -238,6 +238,8 @@
           font-size:14px;
           word-wrap: break-word;
           margin-top: 4px;
+          border-top:1px solid #f2f2f2;
+          padding-top: 3px;
         }
       }
   }
