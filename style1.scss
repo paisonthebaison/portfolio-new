@@ -294,17 +294,10 @@
 .footer{
   background-color: #375961;
   padding: 35px 0;
-  height: 100px;
-  position:relative;
   &__inner{
-    position:absolute;
-    top: 36%;
-    left: 25%;
-    display: flex;
     width: 800px;
     margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 12px;
     @include english-font;
     &__icon{
       a{
@@ -322,8 +315,10 @@
     }
     &__copy-right{
       color:white;
+      margin-top:10px;
     }
   }
 }
+
 
 

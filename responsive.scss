@@ -1,0 +1,76 @@
+.header{
+  .nav{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    ul{
+      display:block;
+    }
+  }
+}
+
+.concept{
+  &__title{
+    width:100%;
+    display:block;
+    h1{
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  &__inner{
+    width: 80%;
+    p{
+      font-size: 13px;
+      width: 100%;
+    }
+    &__details{
+      display:block;
+      &__text{
+        margin-left:0;
+        margin-top: 20px;
+        &__name{
+          p{
+            font-size: 27px;
+            line-height: 1.5rem;
+            span.en-name{
+              font-size:16px;
+            }
+          }
+          
+        }
+        ul.inline{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.products{
+  &__title{
+    width:100%;
+    display:block;
+    h1{
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  &__main{
+    width:80%;
+    display:block;
+    &__detail{
+      width:100%;
+      margin-bottom: 20px;
+    }
+    
+  }
+}
+
+.nav-bottom{
+  display:none;
+}
+
+.footer__inner{
+  width: 80%;
+}
